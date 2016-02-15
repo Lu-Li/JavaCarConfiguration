@@ -1,0 +1,4 @@
+-----test starts.-----
+test with two instances of Forward Wagon ZTW passed
+test for delete one option set passed
+test for delete one option set passed
