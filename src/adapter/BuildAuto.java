@@ -1,4 +1,8 @@
 package adapter;
+
+import model.Automobile;
+import server.AutoServer;
+
 /**
  * BuildAuto
  * extends method from father object
@@ -8,6 +12,6 @@ package adapter;
  *
  */
 public class BuildAuto 
-	extends ProxyAutomobile implements CreateAuto, UpdateAuto{
+	extends ProxyAutomobile implements CreateAuto, UpdateAuto, AutoServer{
 
 }

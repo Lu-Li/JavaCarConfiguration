@@ -2,13 +2,15 @@ package util;
 /**
  * FileIO
  * Description: read from file and build automotive object
+ * add read from file and return properties object to server
  * 
- * @version 01/31/2016
+ * @version 02/21/2016
  * 
  * @author Lu Li  (andrew ID: ll1)
  *
  */
 import java.io.*;
+import java.util.Properties;
 
 import exception.AutoException;
 import model.Automobile;
@@ -89,5 +91,19 @@ public class FileIO {
 			e.printStackTrace();
 		}
 		return auto;
+	}
+	/*
+	 * reading a properties file
+	 * return properties object from client socket over an ObjectStream
+	 */
+	public Properties readProperties(String filename) {
+		Properties props = new Properties();
+		try {
+			FileInputStream in = new FileInputStream(filename);
+			props.load(in);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return props;
 	}
 }

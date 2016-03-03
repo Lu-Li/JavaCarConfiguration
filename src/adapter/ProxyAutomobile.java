@@ -16,7 +16,7 @@ import util.FileIO;
 
 public abstract class ProxyAutomobile {
 	
-	private LinkedHashMap<String, Automobile> mobiles = new LinkedHashMap<String, Automobile>();
+	private static LinkedHashMap<String, Automobile> mobiles = new LinkedHashMap<String, Automobile>();
 	/*
 	 * build a new auto
 	 */
@@ -103,4 +103,20 @@ public abstract class ProxyAutomobile {
 		Automobile auto = mobiles.get(Modelname);
 		auto.setOptionChoice(setName, optionName);
 	}
+	
+	public void addNewAuto(Automobile a) {
+		mobiles.put(a.getModel(), a);
+	}
+	
+	public String getAutoList() {
+		StringBuilder sb = new StringBuilder();
+		for (String auto : mobiles.keySet()) {
+			sb.append(auto);
+			sb.append("; ");
+		}
+		return sb.toString();
+	}
+    public Automobile getAutoByModelname(String modelname) {
+    	return mobiles.get(modelname);
+    }
 }

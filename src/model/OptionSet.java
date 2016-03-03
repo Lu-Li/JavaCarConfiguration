@@ -20,7 +20,13 @@ class OptionSet implements Serializable {
 		/*
 		 * constructor
 		 */
-		protected OptionSet() {};
+		protected OptionSet() {
+			this.opt = new ArrayList<Option>();
+		};
+		protected OptionSet(String name) {
+			this.name = name;
+			this.opt = new ArrayList<Option>();
+		}
 		protected OptionSet(String n, int size) {
 			opt = new ArrayList<Option>();
 			for(int i=0;i<size;i++)
@@ -115,6 +121,10 @@ class OptionSet implements Serializable {
 				System.err.println("can not find option with this name. Update option error");
 			else
 				this.opt.set(index, new Option(newName, optionPrice));
+		}
+		
+		public void addOption(String optionName, float price) {
+			opt.add(new Option(optionName, price));
 		}
 		
 		@Override

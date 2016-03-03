@@ -96,7 +96,7 @@ public class Automobile implements Serializable{
 		throw new AutoException(2);
 	}
 	public synchronized float getTotalPrice() {
-		float price = 0;
+		float price = this.baseprice;
 		for (int i = 0; i < opset.size(); i++) {
 			price += opset.get(i).getOptionChoice().getPrice();
 		}
@@ -174,15 +174,6 @@ public class Automobile implements Serializable{
         	throw new AutoException(5);
     }
     
-    // Set option array in a option set
-//	public void setOption(int opsetIndex, ArrayList<Option> opt) {
-//		if (opsetIndex < opset.size())
-//			this.opset.se
-//			this.opset[opsetIndex].setOpt(opt);
-//		else
-//			System.err.println("Index out of bounds, set Option error");
-//	}
-	// Set element in option array in a option set
     public synchronized void setOption(int opsetIndex, int optIndex, String optionName, float optionPrice){
     	if (opsetIndex < opset.size())
     		this.opset.get(opsetIndex).setOption(optIndex, optionName, optionPrice);
@@ -259,7 +250,23 @@ public class Automobile implements Serializable{
 			}
 		}
     }
-
+    
+    /*
+     * add optionset and option
+     */   
+    public void addOptSet(String optSetName) {
+    	OptionSet os = new OptionSet(optSetName);
+    	opset.add(os);
+    }
+    
+    public void addOption(String optSetName, String optionName, float price) {
+    	for(int i=0; i<opset.size(); i++) {
+    		if (opset.get(i).getName().equals(optSetName)) {
+    			opset.get(i).addOption(optionName, price);
+    		}
+		}
+    }
+    
 	@Override
     public synchronized String toString() {
     	StringBuilder sb = new StringBuilder();
