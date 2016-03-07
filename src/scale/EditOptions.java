@@ -53,6 +53,7 @@ public class EditOptions implements Runnable{
     	randomWait();
     	auto.updateOptionPrice("Focus", "Color", "Liquid Grey Clearcoat Metallic", this.price);
     }
+    
 	@Override
 	public void run() {
 		if (isSyn) {

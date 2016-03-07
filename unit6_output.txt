@@ -1,0 +1,58 @@
+Connecting to database...
+------------- add new automobile to database ---------------
+=====================================================
+data in automobile table is dislayed as below: 
+model: Focus;  make: Ford;  base_price: 18445;  
+model: Prius;  make: Toyota;  base_price: 18445;  
+----------------------------------------------
+add automobile to database successfully
+------------- update option price & optionSet name to database---------------
+=====================================================
+data in optionset table is dislayed as below: 
+model: Focus;  setname: Brakes;  
+model: Focus;  setname: Color;  
+model: Focus;  setname: Power Moonroof;  
+model: Focus;  setname: Side Impact Airbags;  
+model: Focus;  setname: Transmission;  
+model: Prius;  setname: Brakes/Traction Control;  
+model: Prius;  setname: Color;  
+model: Prius;  setname: Power;  
+model: Prius;  setname: Transmission;  
+----------------------------------------------
+=====================================================
+data in options table is dislayed as below: 
+model: Focus;  setname: Brakes;  option_name: ABS;  price: 400;  
+model: Focus;  setname: Brakes;  option_name: ABS with Advance Trac;  price: 1625;  
+model: Focus;  setname: Brakes;  option_name: Standard;  price: 0;  
+model: Focus;  setname: Color;  option_name: CD Silver Clearcoat Metallic;  price: 0;  
+model: Focus;  setname: Color;  option_name: Cloud 9 White Clearcoat;  price: 0;  
+model: Focus;  setname: Color;  option_name: Fort Knox Gold Clearcoat Metallic;  price: 0;  
+model: Focus;  setname: Color;  option_name: French Blue Clearcoat Metallic;  price: 0;  
+model: Focus;  setname: Color;  option_name: Grabber Green Clearcoat Metallic;  price: 0;  
+model: Focus;  setname: Color;  option_name: Infra-Red Clearcoat;  price: 0;  
+model: Focus;  setname: Color;  option_name: Liquid Grey Clearcoat Metallic;  price: 0;  
+model: Focus;  setname: Color;  option_name: Pitch Black Clearcoat;  price: 0;  
+model: Focus;  setname: Color;  option_name: Sangria Red Clearcoat Metallic;  price: 0;  
+model: Focus;  setname: Color;  option_name: Twilight Blue Clearcoat Metallic;  price: 0;  
+model: Focus;  setname: Power Moonroof;  option_name: None;  price: 0;  
+model: Focus;  setname: Power Moonroof;  option_name: Selected;  price: 595;  
+model: Focus;  setname: Side Impact Airbags;  option_name: None;  price: 0;  
+model: Focus;  setname: Side Impact Airbags;  option_name: Selected;  price: 350;  
+model: Focus;  setname: Transmission;  option_name: Automatic;  price: 20;  
+model: Focus;  setname: Transmission;  option_name: Manual;  price: -815;  
+model: Prius;  setname: Brakes/Traction Control;  option_name: ABS;  price: 400;  
+model: Prius;  setname: Brakes/Traction Control;  option_name: ABS with Advance Trac;  price: 1625;  
+model: Prius;  setname: Brakes/Traction Control;  option_name: Standard;  price: 0;  
+model: Prius;  setname: Color;  option_name: Black;  price: 0;  
+model: Prius;  setname: Color;  option_name: Blue;  price: 0;  
+model: Prius;  setname: Power;  option_name: Original;  price: 0;  
+model: Prius;  setname: Power;  option_name: Selected;  price: 595;  
+model: Prius;  setname: Transmission;  option_name: Automatic;  price: 0;  
+model: Prius;  setname: Transmission;  option_name: Manual;  price: -815;  
+----------------------------------------------
+------------- delete automobile from database ---------------
+=====================================================
+data in automobile table is dislayed as below: 
+model: Prius;  make: Toyota;  base_price: 18445;  
+----------------------------------------------
+delete automobile from database successfully

@@ -14,22 +14,18 @@ public class Fix1to100 {
 		System.err.println("File not found. Please enter correct file path and name");
 	}
 
-	public void fixMissingData(int errno) {
-		switch(errno) {
-		case 2:
-			this.printError("price");
-			break;
-		case 3:
-			this.printError("OptionSet");
-			break;
-		case 4:
-			this.printError("Option");
-			break;
-		default:
-			this.printError("");
-			break;
-		}
+	public void fixMissingPrice(int errno) {
+		this.printError("price");
 	}
+	
+	public void fixMissingOptionSet(int errno) {
+		this.printError("OptionSet");
+	}
+	
+	public void fixMissingOption(int errno) {
+		this.printError("Option");
+	}
+	
 	/*
 	 * fix index out of bounds
 	 */

@@ -71,6 +71,25 @@ public class Automobile implements Serializable{
 		return opset.get(index).toString();
 	}
 	
+	public synchronized ArrayList<String> getOpsetNameList() {
+		ArrayList<String> optset = new ArrayList<>();
+		for (int i = 0; i < opset.size(); i++) {
+			optset.add(opset.get(i).getName());
+		}
+		return optset;
+	}
+	
+	public synchronized ArrayList<String> getOptnameListBySetname(String opsetName) {
+		ArrayList<String> optset = new ArrayList<>();
+		for (int i = 0; i < opset.size(); i++) {
+			if (opset.get(i).getName().equals(opsetName)) {
+				return opset.get(i).getOptionList();
+				
+			}
+		}
+		return optset;
+	}
+	
 	public synchronized String getOptionChoice(String setName) throws AutoException {
 		for (int i = 0; i < opset.size(); i++) {
 			if (opset.get(i).getName().equals(setName)) {

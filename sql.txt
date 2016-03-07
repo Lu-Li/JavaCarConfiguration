@@ -1,0 +1,3 @@
+CREATE TABLE IF NOT EXISTS automobile (model VARCHAR(80) PRIMARY KEY, make VARCHAR(80), base_price FLOAT);
+CREATE TABLE IF NOT EXISTS optionset (model VARCHAR(80), setname VARCHAR(80), PRIMARY KEY (model, setname));
+CREATE TABLE IF NOT EXISTS options (model VARCHAR(80), setname VARCHAR(80), option_name VARCHAR(80), price FLOAT, PRIMARY KEY (model, setname, option_name));

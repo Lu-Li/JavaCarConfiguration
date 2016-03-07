@@ -60,6 +60,13 @@ class OptionSet implements Serializable {
 			}
 			return null;
 		}
+		protected ArrayList<String> getOptionList() {
+			ArrayList<String> optionsName = new ArrayList<>();
+			for (int i = 0; i < opt.size(); i++) {
+				optionsName.add(opt.get(i).getName());
+			}
+			return optionsName;
+		}
 		/*
 		 * finder
 		 */

@@ -10,6 +10,7 @@ package util;
  *
  */
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Properties;
 
 import exception.AutoException;
@@ -105,5 +106,23 @@ public class FileIO {
 			e.printStackTrace();
 		}
 		return props;
+	}
+	
+	public static ArrayList<String> readFile(String filename) {
+		ArrayList<String> list = new ArrayList<String>();
+		File file = new File(filename);
+		try {
+			FileReader fr = new FileReader(file);
+			BufferedReader buff = new BufferedReader(fr);
+			String line = buff.readLine();
+			while (line != null) {
+				list.add(line);
+				line = buff.readLine();
+			}
+			buff.close();
+		} catch (IOException e) {
+			System.out.println("file not found! Please enter valid path, etc: sql.txt");
+		}
+		return list;
 	}
 }

@@ -25,9 +25,13 @@ public class AutoException extends Exception implements FixAuto{
 			f1.fixPathError(errno);
 			break;
 		case 2:
+			f1.fixMissingPrice(errno);
+			break;
 		case 3:
+			f1.fixMissingOptionSet(errno);
+			break;
 		case 4:
-			f1.fixMissingData(errno);
+			f1.fixMissingOption(errno);
 			break;
 		case 5: 
 			f1.fixOutOfBound(errno);
